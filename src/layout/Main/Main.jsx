@@ -1,5 +1,5 @@
 const variantMap = {
-  default: 'min-h-screen flex justify-center items-center bg-gray-400'
+  default: 'min-h-screen pt-[150px] flex justify-center items-center bg-gray-400'
 }
 
 const Main = ({ children, variant='default' }) => {

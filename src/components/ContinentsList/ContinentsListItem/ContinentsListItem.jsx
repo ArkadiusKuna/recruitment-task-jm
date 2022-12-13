@@ -13,15 +13,18 @@ const ContinentsListItem = () => {
     }
 
     if (error) {
-        return <Error text='Error occured, try to reload the page...'/>
+        return <Error text='An error occured, try to reload the page...'/>
     }
     
   return (
     <>
       {continents.map((continent) => (
-        <Link key={continent.code} to={`/continent/${continent.code}`}>
+        <Link key={continent.code} to={`/continent/${continent.code}`} className='flex '>
           <Card>
-            <li>{continent.name}</li>
+            <li className='w-full flex justify-between items-center'>
+              <span className='font-bold'>{continent.name}</span>
+              <span className='font-bold'>{continent.code}</span>
+            </li>
           </Card>
         </Link>
       ))}
