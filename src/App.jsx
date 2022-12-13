@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/continents" element={<Continents />} />
-        <Route path="/continent/:code" element={<Countries />} />
+        <Route path="/continents/:code" element={<Countries />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <ToastContainer />

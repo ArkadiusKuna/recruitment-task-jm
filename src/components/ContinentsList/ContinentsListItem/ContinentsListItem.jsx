@@ -19,7 +19,7 @@ const ContinentsListItem = () => {
   return (
     <>
       {continents.map((continent) => (
-        <Link key={continent.code} to={`/continent/${continent.code}`} className='flex '>
+        <Link key={continent.code} to={`/continents/${continent.code}`} className='flex '>
           <Card>
             <li className='w-full flex justify-between items-center'>
               <span className='font-bold'>{continent.name}</span>
