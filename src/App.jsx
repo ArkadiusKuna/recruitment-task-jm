@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage/HomePage";
-import Continents from "./pages/Continents/Continents";
-import Countries from "./pages/Countries/Countries";
-import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import HomePage from "pages/HomePage/HomePage";
+import Continents from "pages/Continents/Continents";
+import Countries from "pages/Countries/Countries";
+import PageNotFound from "pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
