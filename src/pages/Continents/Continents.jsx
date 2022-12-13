@@ -1,6 +1,11 @@
+import Main from "layout/Main/Main";
+import ContinentsList from "components/ContinentsList/ContinentsList";
+
 const Continents = () => {
   return (
-    <div>Continents</div>
+    <Main>
+      <ContinentsList />
+    </Main>
   )
 }
 
