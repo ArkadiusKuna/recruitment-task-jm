@@ -14,13 +14,13 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/continents" element={<Continents />} />
-        <Route path="/continents/:code" element={<Countries />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/continents' element={<Continents />} />
+        <Route path='/continents/:code' element={<Countries />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
-      <ToastContainer />
-    </> 
+      <ToastContainer theme='colored' autoClose={3000} />
+    </>
   );
 }
 

@@ -1,5 +1,9 @@
 const Card = ({ children }) => {
-  return <div className="flex flex-1 justify-between py-6 px-4 m-5 rounded-lg border-2 border-black shadow-2xl bg-orange-400">{children}</div>;
+  return (
+    <div className='w-full h-full flex justify-between py-4 px-4 rounded-lg border-2 border-black shadow-2xl bg-orange-300'>
+      {children}
+    </div>
+  );
 };
 
 export default Card

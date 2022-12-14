@@ -1,6 +1,7 @@
 import { useContinents } from 'graphql/hooks/useContinents';
 import { Link } from 'react-router-dom';
 
+import Main from 'layout/Main/Main';
 import Error from 'layout/Error/Error';
 import Spinner from 'layout/Spinner/Spinner';
 import Card from 'layout/Card/Card';
@@ -13,7 +14,11 @@ const ContinentsListItem = () => {
     }
 
     if (error) {
-        return <Error text='An error occured, try to reload the page...'/>
+      return (
+        <Main variant='error'>
+          <Error text='An error occured, try to reload the page...' />
+        </Main>
+      );
     }
     
   return (
