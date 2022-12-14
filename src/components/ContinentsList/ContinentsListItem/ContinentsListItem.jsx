@@ -1,37 +1,25 @@
-import { useContinents } from 'graphql/hooks/useContinents';
 import { Link } from 'react-router-dom';
 
-import Main from 'layout/Main/Main';
-import Error from 'layout/Error/Error';
-import Spinner from 'layout/Spinner/Spinner';
 import Card from 'layout/Card/Card';
 
-const ContinentsListItem = () => {
-  const { continents, error, loading } = useContinents();
-
-    if (loading) {
-        return <Spinner />
-    }
-
-    if (error) {
-      return (
-        <Main variant='error'>
-          <Error text='An error occured, try to reload the page...' />
-        </Main>
-      );
-    }
-    
+const ContinentsListItem = ({ continents }) => {
   return (
     <>
       {continents.map((continent) => (
-        <Link key={continent.code} to={`/continents/${continent.code}`} className='flex '>
-          <Card>
-            <li className='w-full flex justify-between items-center'>
-              <span className='font-bold'>{continent.name}</span>
-              <span className='font-bold'>{continent.code}</span>
-            </li>
-          </Card>
-        </Link>
+        <li className='w-full'>
+          <Link
+            key={continent.code}
+            to={`/continents/${continent.code}`}
+            className='flex justify-center'
+          >
+            <Card variant='continent'>
+              <div className='w-full flex justify-between items-center'>
+                <span className='font-bold'>{continent.name}</span>
+                <span className='font-bold'>{continent.code}</span>
+              </div>
+            </Card>
+          </Link>
+        </li>
       ))}
     </>
   );

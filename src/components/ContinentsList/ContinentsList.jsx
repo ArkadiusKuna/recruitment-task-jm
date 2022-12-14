@@ -1,12 +1,13 @@
+import Container from 'layout/Container/Container';
 import ContinentsListItem from './ContinentsListItem/ContinentsListItem';
 
-const ContinentsList = () => {
+const ContinentsList = ({ continents }) => {
   return (
-    <div className='max-w-md w-full flex justify-center'>
-      <ul className='w-3/4'>
-        <ContinentsListItem />
+    <Container>
+      <ul className='flex flex-col items-center justify-center gap-4'>
+        <ContinentsListItem continents={continents} />
       </ul>
-    </div>
+    </Container>
   );
 };
 

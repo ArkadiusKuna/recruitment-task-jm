@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useCountries } from 'graphql/hooks/useCountries';
 
 import Spinner from 'layout/Spinner/Spinner';
@@ -26,6 +26,7 @@ const Countries = () => {
   return (
     <Main variant='antarctica'>
       <PageTitle text={`Countries in ${continents.name}`} />
+      <Link to='/continents' className='w-full block text-center text-xl text-black font-bold uppercase tracking-widest underline underline-offset-4 mb-10'>Go back</Link>
       <CountriesList countries={countries} />
     </Main>
   );
